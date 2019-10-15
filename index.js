@@ -1,7 +1,7 @@
 'use strict';
 
 function getNewUrl(breed) {
-    let url = 'https://dog.ceo/api/breed/' ;
+    let url = 'https://cors-anywhere.herokuapp.com/http://dog.ceo/api/breed/' ;
     return url + breed + '/images/random/';
 }
 
@@ -26,7 +26,7 @@ function watchForm() {
 
 function displayResults(responseJson) {
     console.log(responseJson);
-    $('.results-img').replaceWith(
+    $('#result').html(
         chooseResponse(responseJson)
     )
     $('.results').removeClass('hidden');
