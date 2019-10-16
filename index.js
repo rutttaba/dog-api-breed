@@ -1,8 +1,13 @@
 'use strict';
 
 function getNewUrl(breed) {
-    let url = 'https://cors-anywhere.herokuapp.com/http://dog.ceo/api/breed/' ;
-    return url + breed + '/images/random/';
+    
+    if (breed.length === 0) {
+        return 'https://dog.ceo/api/breeds/image/random';
+    } else {
+        return 'https://cors-anywhere.herokuapp.com/http://dog.ceo/api/breed/' + breed + '/images/random/';
+    }
+     
 }
 
 
